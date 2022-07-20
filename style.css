@@ -234,6 +234,7 @@ footer .icons{
     a.active{
         background: #880505;
         color: white;
+        opacity: 1;
     }
     /* align two thumbnail side by side */
     .thumbnails{
