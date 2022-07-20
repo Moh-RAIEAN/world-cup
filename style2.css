@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 10px; 
 }
-.flx{
+.flag-container{
     display: flex;
     gap: 10px;
     justify-content: space-evenly;
