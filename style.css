@@ -1,0 +1,328 @@
+/* ===============================================
+        font used in this site
+=================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&family=Inter&family=PT+Sans+Narrow:wght@700&family=Poppins&display=swap');
+
+/* reset padding and margin for good control */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    margin: 50px 140px  80px;
+}
+/* banner section start */
+.banner{
+    background: #161616;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+.bannerContent,.bannerPoster{
+    flex-basis: 50%;
+}
+/* text part of banner  */
+.bannerContent{
+    color: rgb(221, 219, 219);
+    padding: 111px 24px 111px 106px;
+    width: 100%;
+}
+.bannertitle{
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    line-height: .9;
+}
+/* end of banner text part */
+/* a common button */
+button.btn-big{
+    background: #880505;
+    border-radius: 5px;
+    padding: 16px 25px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-top: 30px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: rgb(221, 219, 219);
+    opacity: .8;
+    transition: .3s;
+    /* text-align: center; */
+}
+button:hover{
+    opacity: 1;
+    box-shadow:inset -2px -3px 5px #4b0303;
+    transition: 0s;
+}
+.fa-angles-right{
+    margin-left: 10px;
+}
+/* image section of banner */
+.bannerPoster img{
+    padding: 10px;
+    width: 100%;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,.2));
+    animation: light 2s linear infinite;
+}
+/* animate the image */
+@keyframes light {
+    0%{
+    filter: drop-shadow(0 0 2px rgba(255,255,255,.2));
+    }
+    50%{
+    filter: drop-shadow(0 0 3px rgba(255,255,255,.6));
+    }
+    100%{
+    filter: drop-shadow(0 0 2px rgba(255,255,255,.2));
+    }
+}
+/* blogs section or thumbnail section */
+.blogs{
+    display: flex;
+    gap: 24px;
+}
+/* page navigation links or buttons start */
+.buttonsContainer{
+    min-width: 200px;
+    background: #161616;
+    border-radius: 10px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+.buttonsContainer a{
+    text-decoration: none;
+    text-align: center;
+    padding: 17px 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #161616;
+    font-weight: 600;
+    opacity: .8;
+    transition: .3s;
+}
+a.active{
+    background: #880505;
+    color: white;
+}
+a:hover{
+    opacity: 1;
+    transition: 0s;
+}
+/* page navigation links or buttons end */
+/* thumbnails start */
+.thumbnails{
+    flex: 1 1;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+.thumbnail{
+    border-radius: 10px;
+    box-shadow: 2px 3px 8px rgba(0,0,0,.5);
+}
+.thumbnail img{
+    width: 100%;
+}
+.thumbContent{
+    padding: 20px;
+}
+.thumbContent button{
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    transition: .2s;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+}
+.thumbContent button:hover{
+    background-color: #161616;
+    color: #aaaaaa;
+    border-radius: 0;
+    box-shadow: none;
+}
+.thumbContent .fa-message{
+    margin-left: 30px;
+}
+.btn-area{
+    text-align: center;
+    display: none;
+}
+/* thumbnail part end */
+/* footer area */
+footer,footer a{
+    background: #161616;
+    color: rgb(194, 193, 193) ;
+    text-decoration: none;
+}
+footer{
+    padding: 10px 0;
+}
+footer h2{
+    text-align: center;
+    font-size: 40px;
+}
+footer hr{
+    margin: 50px 0;
+}
+footer .footerContent {
+    display: flex;
+    justify-content: space-between;
+}
+footer .icons{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+/* tablet and laptop preview */
+@media screen and (min-width:577px) and (max-width:1023px) {
+    /* minimize margin of common container */
+    .container{
+    margin: 50px 50px 80px;
+    }
+    /* to make banner content and image same width */
+    .banner{
+        align-items: stretch;
+    }
+    /* reduced padding */
+    .bannerContent{
+        padding: 61px 2px 61px 76px;
+    }
+    /* reduced banner title size */
+    .bannertitle{
+        font-size: 40px;
+    }
+    /* fit the image to the banner */
+    .banner img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-top: 61px;  /* same to the content top padding*/
+    }
+    /* button container and thumbnail will stack one to another on laptop and tablet version */
+    .blogs{
+        flex-direction: column;
+    }
+    /* change the direction of button/link and distribute space between to them */
+    .buttonsContainer{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        background-color: transparent; /*remove black background from container*/
+    }
+    /* reduce padding  */
+    .buttonsContainer a{
+        padding: 10px 17px;
+        background-color: #aaaaaa;
+    }
+    /* active page indicator link */
+    a.active{
+        background: #880505;
+        color: white;
+    }
+    /* align two thumbnail side by side */
+    .thumbnails{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* hide some thumbnail on laptop and tablet mode */
+    .thumbnail.hide-tab{
+        display: none;
+    }
+    .btn-area{
+        display: block;
+    }
+    footer .footerContent {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+/* mobile preview */
+@media screen and (max-width:576px ) {
+    /* reduced padding again on mobile */
+    .container{
+        margin: 20px 20px;
+    }
+    /* stack the content and poster image of banner */
+    .banner{
+        flex-direction: column;
+    }
+    /* reduced padding and align text to center */
+    .bannerContent{
+        padding: 28px 38px 21px 38px;
+        text-align: center;
+    }
+    /* again reduced font size of heading */
+    .bannertitle{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    /* reduced margin padding */
+    button.btn-big{
+        margin-top: 20px;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .bannerContent p{
+        overflow: hidden;
+        margin: auto;
+        text-overflow: ellipsis;
+        max-height: 200px;
+    }
+    .bannerContent p span{
+        white-space: nowrap;
+    }
+    .thumbnails{
+        grid-template-columns: 1fr;
+    }
+    .blogs{
+        flex-direction: column;
+        margin: 24px 0;
+    }
+    .buttonsContainer{
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+        min-width: auto;
+    }
+    .buttonsContainer a{
+        font-size: 14px;
+    }
+    footer{
+        padding: 0;
+    }
+    footer .container{
+    margin: 0;
+    padding: 20px;
+    }
+    footer h2{
+        font-size: 22px;
+        padding-top: 24px;
+    }
+    footer hr{
+    margin: 24px 0;
+    }
+    footer .footerContent{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    footer .icons{
+    flex-wrap: wrap;
+    }
+}

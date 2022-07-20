@@ -1,0 +1,27 @@
+.thumbnail{
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+}
+.flx{
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.thumbnail img{
+    width: 100%;
+    height: auto;
+}
+.thumbContent {
+    text-align: center;
+    padding: 10px 0;
+}
+.thumbContent h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.thumbContent p{
+    color: lightslategray;
+    font-size: 12px;
+}
