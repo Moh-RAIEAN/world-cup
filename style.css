@@ -14,7 +14,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .container{
-    margin: 50px 140px  80px;
+    margin: 50px 140px;
 }
 /* banner section start */
 .banner{
@@ -81,6 +81,9 @@ button:hover{
     100%{
     filter: drop-shadow(0 0 2px rgba(255,255,255,.2));
     }
+}
+hr{
+    margin: 0 140px;
 }
 /* blogs section or thumbnail section */
 .blogs{
@@ -189,14 +192,15 @@ footer .icons{
     margin-top: 30px;
 }
 /* tablet and laptop preview */
-@media screen and (min-width:577px) and (max-width:1023px) {
+@media screen and (min-width:577px) and (max-width:991px) {
     /* minimize margin of common container */
     .container{
-    margin: 50px 50px 80px;
+    margin: 20px;
     }
     /* to make banner content and image same width */
     .banner{
         align-items: stretch;
+        border-radius: 5px;
     }
     /* reduced padding */
     .bannerContent{
@@ -213,9 +217,13 @@ footer .icons{
         object-fit: cover;
         padding-top: 61px;  /* same to the content top padding*/
     }
+    hr{
+        margin: 0 20px;
+    }
     /* button container and thumbnail will stack one to another on laptop and tablet version */
     .blogs{
         flex-direction: column;
+        gap: 20px;
     }
     /* change the direction of button/link and distribute space between to them */
     .buttonsContainer{
@@ -229,6 +237,7 @@ footer .icons{
     .buttonsContainer a{
         padding: 10px 17px;
         background-color: #aaaaaa;
+        flex-grow: 1;
     }
     /* active page indicator link */
     a.active{
@@ -239,6 +248,7 @@ footer .icons{
     /* align two thumbnail side by side */
     .thumbnails{
         grid-template-columns: repeat(2,1fr);
+        gap: 20px;
     }
     /* hide some thumbnail on laptop and tablet mode */
     .thumbnail.hide-tab{
@@ -246,6 +256,9 @@ footer .icons{
     }
     .btn-area{
         display: block;
+    }
+    .btn-area .btn-big{
+        margin: 20px 0  0;
     }
     footer .footerContent {
         justify-content: center;
@@ -257,11 +270,12 @@ footer .icons{
 @media screen and (max-width:576px ) {
     /* reduced padding again on mobile */
     .container{
-        margin: 20px 20px;
+        margin: 10px;
     }
     /* stack the content and poster image of banner */
     .banner{
         flex-direction: column;
+        border-radius: 5px;
     }
     /* reduced padding and align text to center */
     .bannerContent{
@@ -288,12 +302,17 @@ footer .icons{
     .bannerContent p span{
         white-space: nowrap;
     }
+    hr{
+        margin: 0 10px;
+    }
     .thumbnails{
         grid-template-columns: 1fr;
+        gap: 10px;
     }
     .blogs{
         flex-direction: column;
-        margin: 24px 0;
+        margin: 10px 0;
+        gap: 10px;
     }
     .buttonsContainer{
         flex-direction: column;
