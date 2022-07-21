@@ -316,6 +316,9 @@ footer .icons{
     .bannerContent p span{
         white-space: nowrap;
     }
+    .bannerPoster img{
+        padding: 0 10px;
+    }
     hr{
         margin: 0 10px;
     }
