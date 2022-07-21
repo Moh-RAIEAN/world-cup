@@ -93,7 +93,7 @@ hr{
 /*********************************************************** blogs section or thumbnail section start ****************/
 .blogs{
     display: flex;
-    gap: 24px;
+    gap: 10px;
 }
 /****************************** navigator part  **************************/
 /* page navigation links  */
@@ -104,8 +104,8 @@ hr{
     align-self: flex-start;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 10px;
 }
 /* links / page navigator design */
 .buttonsContainer a{
@@ -136,7 +136,7 @@ a.active{
     flex: 1 1;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 24px;
+    gap: 10px;
 }
 .thumbnail{
     border-radius: 10px;
@@ -146,7 +146,7 @@ a.active{
     width: 100%;
 }
 .thumbContent{
-    padding: 20px;
+    padding: 10px;
 }
 .thumbContent button{
     padding: 10px 15px;
@@ -212,7 +212,7 @@ footer .icons{
     .container{
     margin: 20px;
     }
-    /* to make banner content and image same width */
+    /* reduced radius of banner */
     .banner{
         border-radius: 5px;
     }
@@ -275,9 +275,9 @@ footer .icons{
         gap: 30px;
     }
 }
-/*************************************
-             mobile preview 
-*************************************/
+/*********************************************************************************
+                                      mobile preview 
+***********************************************************************************/
 @media screen and (max-width:576px ) {
     /* reduced padding again on mobile */
     .container{
