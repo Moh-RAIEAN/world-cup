@@ -9,19 +9,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* default font size and family */
 body{
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
 }
+/* a common container to contain child element */
 .container{
     margin: 50px 140px;
 }
-/* banner section start */
+/*********************************** banner section start ********************************/
 .banner{
     background: #161616;
     border-radius: 30px;
     display: flex;
-    /* align-items: center; */
 }
 .bannerContent,.bannerPoster{
     flex-basis: 50%;
@@ -29,13 +30,14 @@ body{
 /* text part of banner  */
 .bannerContent{
     color: rgb(221, 219, 219);
-    padding: 39px 24px 0px 28px;
+    padding: 20px 24px 20px 100px;
     width: 100%;
+    line-height: 1.5;
 }
 .bannertitle{
     font-weight: 700;
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: 'Edu VIC WA NT Beginner', cursive;
     line-height: .9;
 }
@@ -48,7 +50,7 @@ button.btn-big{
     border: none;
     outline: none;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     font-family: 'PT Sans Narrow', sans-serif;
     color: rgb(221, 219, 219);
     opacity: .8;
@@ -65,7 +67,7 @@ button:hover{
 }
 /* image section of banner */
 .bannerPoster img{
-    padding: 10px;
+    padding: 20px 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -84,15 +86,17 @@ button:hover{
     filter: drop-shadow(0 0 2px rgba(255,255,255,.2));
     }
 }
+/*********************************************************** end banner section  *******************************/
 hr{
     margin: 0 140px;
 }
-/* blogs section or thumbnail section */
+/*********************************************************** blogs section or thumbnail section start ****************/
 .blogs{
     display: flex;
     gap: 24px;
 }
-/* page navigation links or buttons start */
+/****************************** navigator part  **************************/
+/* page navigation links  */
 .buttonsContainer{
     min-width: 200px;
     background: #161616;
@@ -103,10 +107,11 @@ hr{
     padding: 20px;
     gap: 20px;
 }
+/* links / page navigator design */
 .buttonsContainer a{
     text-decoration: none;
     text-align: center;
-    padding: 17px 10px;
+    padding: 10px 17px;
     background: #FFFFFF;
     border-radius: 10px;
     font-size: 20px;
@@ -115,16 +120,18 @@ hr{
     opacity: .8;
     transition: .3s;
 }
-a.active{
-    background: #880505;
-    color: white;
-}
 a:hover{
     opacity: 1;
     transition: 0s;
 }
-/* page navigation links or buttons end */
-/* thumbnails start */
+/* active page indicator button */
+a.active{
+    background: #880505;
+    color: white;
+    opacity: 1;
+}
+/************************** page navigation links or buttons end *******************/
+/***************************** thumbnails start *********************/
 .thumbnails{
     flex: 1 1;
     display: grid;
@@ -148,24 +155,26 @@ a:hover{
     text-transform: capitalize;
     border: none;
     outline: none;
-    background-color: #aaaaaa;
+    background-color: #cfcfcf;
     border-radius: 5px;
 }
 .thumbContent button:hover{
-    background-color: #161616;
-    color: #aaaaaa;
-    border-radius: 0;
+    background-color: #999898;
+    color: black;
     box-shadow: none;
 }
+/* produce some gap before icons */
 .thumbContent .fa-message{
     margin-left: 30px;
 }
+/* only visible on tablet mode */
 .btn-area{
     text-align: center;
     display: none;
 }
-/* thumbnail part end */
-/* footer area */
+/*************************** thumbnail part end ******************/
+/**************************************************************************** blog and thumbnail end ********************/
+/**************************************************************** footer area  start*************************************/
 footer,footer a{
     background: #161616;
     color: rgb(194, 193, 193) ;
@@ -193,7 +202,11 @@ footer .icons{
     gap: 30px;
     margin-top: 30px;
 }
-/* tablet and laptop preview */
+/********************************************************* footer end ***********************************/
+
+/********************************************************************************************************
+                                     tablet and laptop preview 
+*******************************************************************************************************/
 @media screen and (min-width:577px) and (max-width:991px) {
     /* minimize margin of common container */
     .container{
@@ -201,7 +214,6 @@ footer .icons{
     }
     /* to make banner content and image same width */
     .banner{
-        align-items: stretch;
         border-radius: 5px;
     }
     /* reduced padding */
@@ -235,18 +247,11 @@ footer .icons{
         padding: 0;
         background-color: transparent; /*remove black background from container*/
     }
-    /* reduce padding  */
+    /* grow every item evenly  */
     .buttonsContainer a{
-        padding: 10px 17px;
-        background-color: #aaaaaa;
         flex-grow: 1;
     }
-    /* active page indicator link */
-    a.active{
-        background: #880505;
-        color: white;
-        opacity: 1;
-    }
+
     /* align two thumbnail side by side */
     .thumbnails{
         grid-template-columns: repeat(2,1fr);
@@ -256,19 +261,23 @@ footer .icons{
     .thumbnail.hide-tab{
         display: none;
     }
+    /* this button are is only visible on tablet mode */
     .btn-area{
         display: block;
     }
     .btn-area .btn-big{
         margin: 20px 0  0;
     }
+    /* footer section */
     footer .footerContent {
         justify-content: center;
         flex-wrap: wrap;
         gap: 30px;
     }
 }
-/* mobile preview */
+/*************************************
+             mobile preview 
+*************************************/
 @media screen and (max-width:576px ) {
     /* reduced padding again on mobile */
     .container{
@@ -295,6 +304,7 @@ footer .icons{
         padding: 8px 12px;
         text-align: center;
     }
+    /* show ellipse when mobile screen is enabled */
     .bannerContent p{
         overflow: hidden;
         margin: auto;
@@ -307,10 +317,7 @@ footer .icons{
     hr{
         margin: 0 10px;
     }
-    .thumbnails{
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+    /* stack the thumbnail after buttons */
     .blogs{
         flex-direction: column;
         margin: 10px 0;
@@ -325,6 +332,12 @@ footer .icons{
     .buttonsContainer a{
         font-size: 14px;
     }
+    /* full width thumbnail */
+    .thumbnails{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    /* footer section */
     footer{
         padding: 0;
     }
