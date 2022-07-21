@@ -55,7 +55,6 @@ button.btn-big{
     color: rgb(221, 219, 219);
     opacity: .8;
     transition: .3s;
-    /* text-align: center; */
 }
 button:hover{
     opacity: 1;
@@ -63,7 +62,8 @@ button:hover{
     transition: 0s;
 }
 .fa-angles-right{
-    margin-left: 10px;
+    /* margin-left: 3px; */
+    vertical-align: middle;
 }
 /* image section of banner */
 .bannerPoster img{
@@ -297,12 +297,14 @@ footer .icons{
     .bannertitle{
         font-size: 30px;
         font-weight: 700;
+        margin-bottom: 30px;
     }
     /* reduced margin padding */
     button.btn-big{
-        margin-top: 20px;
+        margin-top: 30px;
         padding: 8px 12px;
         text-align: center;
+        font-size: 15px;
     }
     /* show ellipse when mobile screen is enabled */
     .bannerContent p{
